@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">DoguinhoApp</string>
+    <string name="dog_name">Neitan</string>
+    <string name="dog_description">Um doguinho Camarada</string> <!--Não utilizado-->
+    <string name="dog_followers">1800</string>
+    <string name="dog_following">9000</string>
+    <string name="dog_posts">239</string>
+    <string name="dog_history">200</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="posts">Posts</string>
+    <string name="history">Historys</string>
+    <string name="dog_city">Goiânia</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_follow">Follow</string>
+    <string name="btn_message">Message</string>
+
+    <!-- ORNA LAYOUT-->
+    <string name="player_name">Muuleek</string>
+    <string name="menu_character">Character</string>
+    <string name="menu_status">Status</string>
+    <string name="menu_spells">Spells</string>
+    <string name="menu_equipment">Equipment</string>
+    <string name="menu_gauntlet">Gauntlet</string>
+    <string name="menu_arena">Arena</string>
+    <string name="menu_runeshop">Runeshop</string>
+    <string name="menu_options">Options</string>
+    <string name="menu_party">Party</string>
+    <string name="menu_inventory">Inventory</string>
+    <!-- NOT IN DOGINHO APP SCOPE-->
 </resources>

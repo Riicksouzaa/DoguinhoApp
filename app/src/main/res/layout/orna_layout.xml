@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tp_player_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/player_name"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <ImageView
+                android:id="@+id/img_menu_character"
+                style="@style/img_menu"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tp_player_name" />
+
+            <ImageView
+                android:id="@+id/img_menu_arena"
+                style="@style/img_menu"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_character"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_character"
+                app:layout_constraintTop_toBottomOf="@+id/txt_gauntlet" />
+
+            <ImageView
+                android:id="@+id/img_menu_runeshop"
+                style="@style/img_menu"
+                app:layout_constraintBottom_toBottomOf="@+id/img_menu_arena"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_status"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_status"
+                app:layout_constraintTop_toTopOf="@+id/img_menu_arena"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/img_menu_spells"
+                style="@style/img_menu"
+                android:layout_marginStart="50dp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_menu_equipment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/img_menu_equipment" />
+
+            <ImageView
+                android:id="@+id/img_menu_party"
+                style="@style/img_menu"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_spells" />
+
+            <ImageView
+                android:id="@+id/img_menu_inventory"
+                style="@style/img_menu"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_equipment" />
+
+            <ImageView
+                android:id="@+id/img_menu_gauntlet"
+                style="@style/img_menu"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_spells"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_spells"
+                app:layout_constraintTop_toBottomOf="@+id/txt_party" />
+
+            <ImageView
+                android:id="@+id/img_menu_equipment"
+                style="@style/img_menu"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_status" />
+
+            <ImageView
+                android:id="@+id/img_menu_options"
+                style="@style/img_menu"
+                app:layout_constraintBottom_toBottomOf="@+id/img_menu_gauntlet"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_equipment"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_equipment"
+                app:layout_constraintTop_toTopOf="@+id/img_menu_gauntlet" />
+
+            <ImageView
+                android:id="@+id/img_menu_status"
+                style="@style/img_menu"
+                android:layout_marginEnd="100dp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_menu_character"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/img_menu_character" />
+
+            <TextView
+                android:id="@+id/txt_character"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/menu_character"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_character"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_character"
+                app:layout_constraintTop_toBottomOf="@+id/img_menu_character" />
+
+            <TextView
+                android:id="@+id/txt_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/menu_status"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_status"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_status"
+                app:layout_constraintTop_toBottomOf="@+id/img_menu_status" />
+
+            <ImageView
+                android:id="@+id/img_player_central"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toTopOf="@+id/img_menu_arena"
+                app:layout_constraintEnd_toStartOf="@+id/img_menu_inventory"
+                app:layout_constraintStart_toEndOf="@+id/img_menu_party"
+                app:layout_constraintTop_toBottomOf="@+id/txt_character"
+                />
+
+            <TextView
+                android:id="@+id/txt_spells"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/menu_spells"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_spells"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_spells"
+                app:layout_constraintTop_toBottomOf="@+id/img_menu_spells" />
+
+            <TextView
+                android:id="@+id/txt_equipment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/menu_equipment"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_equipment"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_equipment"
+                app:layout_constraintTop_toBottomOf="@+id/img_menu_equipment" />
+
+            <TextView
+                android:id="@+id/txt_gauntlet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/menu_gauntlet"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_gauntlet"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_gauntlet"
+                app:layout_constraintTop_toBottomOf="@+id/img_menu_gauntlet" />
+
+            <TextView
+                android:id="@+id/txt_arena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/menu_arena"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_arena"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_arena"
+                app:layout_constraintTop_toBottomOf="@+id/img_menu_arena" />
+
+            <TextView
+                android:id="@+id/txt_runeshop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/menu_runeshop"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_runeshop"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_runeshop"
+                app:layout_constraintTop_toBottomOf="@+id/img_menu_runeshop" />
+
+            <TextView
+                android:id="@+id/txt_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/menu_options"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_options"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_options"
+                app:layout_constraintTop_toBottomOf="@+id/img_menu_options" />
+
+            <TextView
+                android:id="@+id/txt_party"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/menu_party"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_party"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_party"
+                app:layout_constraintTop_toBottomOf="@+id/img_menu_party" />
+
+            <TextView
+                android:id="@+id/txt_inventory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/menu_inventory"
+                app:layout_constraintEnd_toEndOf="@+id/img_menu_inventory"
+                app:layout_constraintStart_toStartOf="@+id/img_menu_inventory"
+                app:layout_constraintTop_toBottomOf="@+id/img_menu_inventory" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,13 +6,193 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/dog_image"
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/profile_dog"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dog_name"
+                style="@style/player_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/dog_name"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/dog_image"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/dog_image"
+                app:layout_constraintTop_toBottomOf="@+id/dog_image" />
+
+            <TextView
+                android:id="@+id/dog_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/dog_city"
+                app:layout_constraintEnd_toEndOf="@+id/dog_name"
+                app:layout_constraintStart_toStartOf="@+id/dog_name"
+                app:layout_constraintTop_toBottomOf="@+id/dog_name" />
+
+            <TextView
+                android:id="@+id/dog_followers"
+                style="@style/numbers_dog_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/dog_followers"
+                android:visibility="visible"
+                app:layout_constraintBaseline_toBaselineOf="@+id/dog_following"
+                app:layout_constraintEnd_toStartOf="@+id/dog_following"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/dog_following"
+                style="@style/numbers_dog_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="@string/dog_following"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/dog_posts"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/dog_followers"
+                app:layout_constraintTop_toBottomOf="@+id/dog_city" />
+
+            <TextView
+                android:id="@+id/dog_posts"
+                style="@style/numbers_dog_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dog_posts"
+                android:visibility="visible"
+                app:layout_constraintBaseline_toBaselineOf="@+id/dog_following"
+                app:layout_constraintEnd_toStartOf="@+id/dog_history"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/dog_following" />
+
+            <TextView
+                android:id="@+id/dog_history"
+                style="@style/numbers_dog_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@string/dog_history"
+                android:visibility="visible"
+                app:layout_constraintBaseline_toBaselineOf="@+id/dog_following"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/dog_posts" />
+
+            <TextView
+                android:id="@+id/dog_followers_desc"
+                style="@style/dog_desc_names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/followers"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/dog_followers"
+                app:layout_constraintStart_toStartOf="@+id/dog_followers"
+                app:layout_constraintTop_toBottomOf="@+id/dog_followers" />
+
+            <TextView
+                android:id="@+id/dog_following_desc"
+                style="@style/dog_desc_names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/following"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/dog_following"
+                app:layout_constraintStart_toStartOf="@+id/dog_following"
+                app:layout_constraintTop_toBottomOf="@+id/dog_following" />
+
+            <TextView
+                android:id="@+id/dog_posts_desc"
+                style="@style/dog_desc_names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/posts"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/dog_posts"
+                app:layout_constraintStart_toStartOf="@+id/dog_posts"
+                app:layout_constraintTop_toBottomOf="@+id/dog_posts" />
+
+            <TextView
+                android:id="@+id/dog_history_desc"
+                style="@style/dog_desc_names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/history"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/dog_history"
+                app:layout_constraintStart_toStartOf="@+id/dog_history"
+                app:layout_constraintTop_toBottomOf="@+id/dog_history" />
+
+            <Button
+                android:id="@+id/btn_add"
+                style="@style/btn_rounded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:backgroundTint="@color/btn_add_color"
+                android:text="@string/btn_add"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btn_follow"
+                app:layout_constraintEnd_toStartOf="@+id/btn_follow"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btn_follow"
+                style="@style/btn_rounded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/btn_follow_color"
+                android:text="@string/btn_follow"
+                app:layout_constraintEnd_toStartOf="@+id/btn_message"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_add"
+                app:layout_constraintTop_toBottomOf="@+id/dog_following_desc" />
+
+            <Button
+                android:id="@+id/btn_message"
+                style="@style/btn_rounded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/btn_message_color"
+                android:text="@string/btn_message"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btn_follow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_follow" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
